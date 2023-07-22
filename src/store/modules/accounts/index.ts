@@ -1,16 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { Account } from './interface'
+import { AccountState } from './interface'
 
-const initialState: Account = {}
+const initialState: AccountState = {
+  list: [],
+}
 
 export const accountSlice = createSlice({
   name: 'accounts',
   initialState,
   reducers: {
-    setAccount(state, action) {
-      state = action.payload
+    setAccountList(state, action) {
+      state.list = action.payload
     },
   },
 })
 
-export const { setAccount } = accountSlice.actions
+export const { setAccountList } = accountSlice.actions
