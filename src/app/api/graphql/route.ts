@@ -5,11 +5,7 @@ import mongoose from 'mongoose'
 
 // Connect to MongoDB database
 mongoose.connect(
-  process.env.API_MONGODB_URL || 'mongodb://localhost:27017/wallet',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
+  process.env.API_MONGODB_URL || 'mongodb://localhost:27017/wallet'
 )
 
 const db = mongoose.connection
