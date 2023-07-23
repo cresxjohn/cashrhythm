@@ -1,4 +1,4 @@
-import MainHeader from '@/layout/headers/Main'
+import MainHeader from '@/app/(layout)/headers/Main'
 import { FC, ReactNode } from 'react'
 import './style.css'
 

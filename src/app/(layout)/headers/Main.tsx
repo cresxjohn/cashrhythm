@@ -2,8 +2,8 @@
 
 import Image from 'next/image'
 import { FC } from 'react'
-import Button from '../../components/button'
-import IconButton from '../../components/icon-button'
+import Button from '../../(components)/button'
+import IconButton from '../../(components)/icon-button'
 import './style.css'
 
 const MainHeader: FC = () => {

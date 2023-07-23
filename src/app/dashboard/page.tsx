@@ -1,8 +1,8 @@
 'use client'
 
-import HomeLayout from '@/layout/HomeLayout'
-import withStoreProvider from '@/store/Provider'
-import { getProfileName } from '@/store/modules/profile/getter'
+import HomeLayout from '@/app/(layout)/HomeLayout'
+import withStoreProvider from '@/app/(store)/Provider'
+import { getProfileName } from '@/app/(store)/modules/profile/getter'
 import { FC } from 'react'
 import { useSelector } from 'react-redux'
 

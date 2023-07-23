@@ -1,6 +1,6 @@
 'use client'
 
-import withStoreProvider from '@/store/Provider'
+import withStoreProvider from '@/app/(store)/Provider'
 import { usePathname, useRouter } from 'next/navigation'
 import { FC, useEffect } from 'react'
 
