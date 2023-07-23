@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import Button from '../button'
-import Icon from '../icons'
+import Icon from '../icon'
 
 interface Props {
   type: string
