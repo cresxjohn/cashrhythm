@@ -24,7 +24,7 @@ interface Props {
 
 const PlannerAddModal: FC<Props> = (props) => {
   const { isOpen, onOpenChange } = props
-  const [type, setType] = useState<Key>('income')
+  const [type, setType] = useState('income')
   const [recurring, setRecurring] = useState(false)
 
   const isTransfer = type === 'transfer'
@@ -44,7 +44,7 @@ const PlannerAddModal: FC<Props> = (props) => {
               <label>Add New Record</label>
               <Tabs
                 selectedKey={type}
-                onSelectionChange={(key) => setType(key)}
+                onSelectionChange={(key) => setType(key as string)}
                 aria-label="Record type"
                 fullWidth
               >

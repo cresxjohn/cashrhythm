@@ -165,7 +165,7 @@ const PlannerTable: FC<Props> = (props) => {
       case 'link':
         if (!cellValue && typeof cellValue !== 'string') return
         return (
-          <Link isExternal href={cellValue}>
+          <Link isExternal href={cellValue as string}>
             <ExportIcon size={ICON_SIZES.SMALL} />
           </Link>
         )
@@ -296,11 +296,7 @@ const PlannerTable: FC<Props> = (props) => {
                 ))}
               </DropdownMenu>
             </Dropdown>
-            <Button
-              color="primary"
-              endContent={<AddIcon />}
-              onClick={onAddNew}
-            >
+            <Button color="primary" endContent={<AddIcon />} onClick={onAddNew}>
               Add New
             </Button>
           </div>
