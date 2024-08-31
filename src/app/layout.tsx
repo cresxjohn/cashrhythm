@@ -1,3 +1,4 @@
+import EnvironmentBanner from '@/components/env-banner'
 import { Providers } from '@/providers'
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
@@ -15,7 +16,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <EnvironmentBanner />
+          {children}
+        </Providers>
         <Analytics />
       </body>
     </html>
