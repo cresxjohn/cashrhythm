@@ -1,7 +1,7 @@
-import resolvers from '@/app/api/graphql/resolvers'
-import typeDefs from '@/app/api/graphql/schema'
 import { createSchema, createYoga } from 'graphql-yoga'
 import mongoose from 'mongoose'
+import resolvers from './resolvers'
+import typeDefs from './schemas'
 
 // Connect to MongoDB database
 mongoose.connect(
