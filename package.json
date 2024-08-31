@@ -9,23 +9,33 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@graphql-tools/load-files": "^7.0.0",
+    "@graphql-tools/merge": "^9.0.7",
+    "@nextui-org/react": "^2.4.6",
     "@reduxjs/toolkit": "^1.9.5",
-    "@types/node": "20.4.3",
-    "@types/react": "18.2.15",
-    "@types/react-dom": "18.2.7",
     "@vercel/analytics": "^1.0.1",
-    "autoprefixer": "^10.4.14",
-    "eslint": "8.45.0",
-    "eslint-config-next": "13.4.12",
-    "graphql": "^16.7.1",
-    "graphql-yoga": "^4.0.3",
+    "accounting": "^0.4.1",
+    "framer-motion": "^11.3.30",
+    "graphql": "^16.9.0",
+    "graphql-tools": "^9.0.1",
+    "graphql-yoga": "^5.7.0",
     "mongoose": "^7.4.0",
     "next": "13.4.12",
-    "postcss": "^8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-redux": "^8.1.1",
     "tailwindcss": "^3.3.3",
-    "typescript": "5.1.6"
+    "yarn": "^1.22.22"
+  },
+  "devDependencies": {
+    "@types/accounting": "^0.4.5",
+    "@types/node": "^22.5.0",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.9.1",
+    "eslint-config-next": "^14.2.6",
+    "postcss": "^8.4.41",
+    "typescript": "^5.5.4"
   }
 }
