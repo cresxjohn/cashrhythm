@@ -4,7 +4,7 @@ const EnvironmentBanner = () => {
   if (isProd) return
 
   return (
-    <div className="w-full bg-gray-200 text-foreground/80 text-center font-medium text-sm py-1 uppercase">
+    <div className="fixed bottom-0 right-0 bg-color-warning/10 text-color-warning/80 text-center font-medium text-xs py-1 px-2 m-2 rounded-md uppercase">
       {process.env.NEXT_ENV}
     </div>
   )
