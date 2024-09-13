@@ -53,17 +53,11 @@ const MainTabs: FC = () => {
   }
 
   return (
-    <div>
-      <Tabs
-        selectedKey={selectedKey}
-        onSelectionChange={handleOnSelectionChange}
-        variant="underlined"
-      >
-        {tabs.map((tab) => (
-          <Tab key={tab.key} title={tab.title} />
-        ))}
-      </Tabs>
-    </div>
+    <Tabs selectedKey={selectedKey} onSelectionChange={handleOnSelectionChange}>
+      {tabs.map((tab) => (
+        <Tab key={tab.key} title={tab.title} />
+      ))}
+    </Tabs>
   )
 }
 

@@ -8,19 +8,19 @@ import './global.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Wallet',
-  description: 'Your financial companion',
+  title: 'cashrhythm',
+  description: 'feel the pulse of your finances',
 }
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <head>
-        <meta name="application-name" content="Wallet" />
+        <meta name="application-name" content="cashrhythm" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Wallet" />
-        <meta name="description" content="Best Wallet in the world" />
+        <meta name="apple-mobile-web-app-title" content="cashrhythm" />
+        <meta name="description" content="feel the pulse of your finances" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-config" content="/icons/browserconfig.xml" />
@@ -71,17 +71,23 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:url" content="https://yourdomain.com" />
-        <meta name="twitter:title" content="Wallet" />
-        <meta name="twitter:description" content="Best Wallet in the world" />
+        <meta name="twitter:title" content="cashrhythm" />
+        <meta
+          name="twitter:description"
+          content="feel the pulse of your finances"
+        />
         <meta
           name="twitter:image"
           content="https://yourdomain.com/icons/android-chrome-192x192.png"
         />
         <meta name="twitter:creator" content="@DavidWShadow" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Wallet" />
-        <meta property="og:description" content="Best Wallet in the world" />
-        <meta property="og:site_name" content="Wallet" />
+        <meta property="og:title" content="cashrhythm" />
+        <meta
+          property="og:description"
+          content="feel the pulse of your finances"
+        />
+        <meta property="og:site_name" content="cashrhythm" />
         <meta property="og:url" content="https://yourdomain.com" />
         <meta
           property="og:image"
