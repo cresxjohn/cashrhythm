@@ -15,6 +15,7 @@
     "@nextui-org/react": "^2.4.6",
     "@reduxjs/toolkit": "^1.9.5",
     "@vercel/analytics": "^1.0.1",
+    "@vercel/speed-insights": "^1.0.12",
     "accounting": "^0.4.1",
     "framer-motion": "^11.3.30",
     "graphql": "^16.9.0",
