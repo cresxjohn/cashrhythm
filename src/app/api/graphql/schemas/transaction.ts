@@ -18,7 +18,7 @@ export default gql`
     isPaid: Boolean
   }
 
-  extend type Mutation {
+  type Mutation {
     updateTransaction(
       transactionId: ID!
       input: UpdateTransactionInput!

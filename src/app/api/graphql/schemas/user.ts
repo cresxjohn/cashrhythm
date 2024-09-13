@@ -34,11 +34,11 @@ export default gql`
     client: Client!
   }
 
-  extend type Query {
-    getClient(input: ): Client!
+  type Query {
+    getClient(input: GetClientInput!): Client!
   }
 
-  extend type Mutation {
+  type Mutation {
     createUser(input: CreateUserInput!): CreateUserPayload!
     deactivateUser(input: DeactivateUserInput!): User!
   }

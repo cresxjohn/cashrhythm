@@ -41,7 +41,7 @@ export default gql`
     isArchived: Boolean
   }
 
-  extend type Mutation {
+  type Mutation {
     createAccount(clientId: ID!, input: CreateAccountInput!): Account!
     updateAccount(accountId: ID!, input: UpdateAccountInput!): Account!
     deleteAccount(accountId: ID!, clientId: ID!): Account!

@@ -55,7 +55,7 @@ export default gql`
     isArchived: Boolean
   }
 
-  extend type Mutation {
+  type Mutation {
     createPayment(clientId: ID!, input: CreatePaymentInput!): Payment!
     updatePayment(paymentId: ID!, input: UpdatePaymentInput!): Payment!
     deletePayment(paymentId: ID!, clientId: ID!): Payment!
