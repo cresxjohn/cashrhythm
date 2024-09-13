@@ -15,6 +15,10 @@ export default gql`
     payments: [Payment!]!
   }
 
+  input GetClientInput {
+    userId: String!
+  }
+
   input CreateUserInput {
     username: String!
     password: String!
@@ -28,6 +32,10 @@ export default gql`
   type CreateUserPayload {
     user: User!
     client: Client!
+  }
+
+  extend type Query {
+    getClient(input: ): Client!
   }
 
   extend type Mutation {

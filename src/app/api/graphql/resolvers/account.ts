@@ -1,4 +1,3 @@
-import { Query } from 'mongoose'
 import Account, { IAccount } from '../models/account'
 import Client from '../models/client'
 

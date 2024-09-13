@@ -12,6 +12,9 @@ const Home: FC = () => {
     if (pathname === '/') router.replace('/dashboard')
   }, [pathname, router])
 
+  // load client data
+  useEffect(() => {}, [])
+
   return null
 }
 

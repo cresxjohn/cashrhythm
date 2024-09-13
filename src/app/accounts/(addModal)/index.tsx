@@ -102,6 +102,18 @@ const AccountsAddModal: FC<Props> = (props) => {
                   type="number"
                   isClearable
                 />
+                <Input
+                  label="Annual Fee"
+                  placeholder="Enter annual fee"
+                  type="number"
+                  startContent={
+                    <div className="pointer-events-none flex items-center">
+                      <span className="text-default-400 text-small">₱</span>
+                    </div>
+                  }
+                  min={0}
+                  isClearable
+                />
                 <DatePicker label="Date Issued" />
                 <Switch>Exclude in Stats</Switch>
               </form>

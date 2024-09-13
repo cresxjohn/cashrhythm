@@ -11,17 +11,19 @@ interface Props {
 
 const HomeLayout: FC<Props> = ({ children }) => {
   return (
-    <main className="flex flex-col items-center">
-      <div className="layout-home pt-6">
+    <main className="p-4">
+      <div className="flex flex-row items-center gap-4">
         <Image
-          width={40}
-          height={40}
+          width={24}
+          height={24}
           alt="logo"
           src="/logo.png"
-          className="mb-4 ml-3"
+          className="ml-4 -mt-1"
         />
         <MainTabs />
-        {children}
+      </div>
+      <div className="flex flex-col items-center">
+        <div className="w-full max-w-[1080px] pt-10">{children}</div>
       </div>
     </main>
   )
