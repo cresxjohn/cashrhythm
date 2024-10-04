@@ -2,7 +2,7 @@ import { gql } from 'graphql-tag'
 
 export default gql`
   type Account {
-    id: ID!
+    _id: ID!
     name: String!
     category: String!
     balance: Float!
@@ -42,10 +42,10 @@ export default gql`
   }
 
   type Mutation {
-    createAccount(clientId: ID!, input: CreateAccountInput!): Account!
-    updateAccount(accountId: ID!, input: UpdateAccountInput!): Account!
-    deleteAccount(accountId: ID!, clientId: ID!): Account!
-    archiveAccount(accountId: ID!): Account!
-    unarchiveAccount(accountId: ID!): Account!
+    createAccount(clientID: ID!, input: CreateAccountInput!): Account!
+    updateAccount(accountID: ID!, input: UpdateAccountInput!): Account!
+    deleteAccount(accountID: ID!, clientID: ID!): Account!
+    archiveAccount(accountID: ID!): Account!
+    unarchiveAccount(accountID: ID!): Account!
   }
 `

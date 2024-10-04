@@ -18,45 +18,16 @@ import { formatMoney } from 'accounting'
 import { useCallback, useState } from 'react'
 import AccountsAddModal from './(addModal)'
 import { ACCOUNT_CATEGORIES } from './constant'
-
-interface Account {
-  id: number
-  name: string
-  category: string
-  lastFourDigit?: number | null
-  balance: number
-  creditLimit?: number
-}
-
-const accounts: Account[] = [
-  {
-    id: 1,
-    name: 'General Cash',
-    category: 'Cash',
-    lastFourDigit: null,
-    balance: 2354312.34,
-  },
-  {
-    id: 2,
-    name: 'BPI Amore Cashback',
-    category: 'Credit Card',
-    lastFourDigit: 4532,
-    balance: 12645.43,
-    creditLimit: 31000,
-  },
-  {
-    id: 3,
-    name: 'Own Bank',
-    category: 'Savings',
-    lastFourDigit: 3535,
-    balance: 122645.43,
-  },
-]
+import { useSelector } from 'react-redux'
+import { getAccounts } from '@/store/slices/client/getter'
+import { Account } from '@/store/slices/client/interface'
 
 const Accounts = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
   const [selectedAccountID, setSelectedAccountID] = useState(0)
   const [filterValue, setFilterValue] = useState('')
+
+  const accounts = useSelector(getAccounts)
 
   const onSearchChange = useCallback((value?: string) => {
     if (value) {
@@ -81,9 +52,10 @@ const Accounts = () => {
 
           return (
             <Card
-              key={account.id}
+              key={account._id}
               className={cn('h-[132px] p-1 text-foreground', {
-                'bg-color-primary text-white': selectedAccountID === account.id,
+                'bg-color-primary text-white':
+                  selectedAccountID === account._id,
               })}
               shadow="none"
             >
@@ -95,9 +67,9 @@ const Accounts = () => {
                 <p className="text-tiny opacity-60 font-semibold uppercase">
                   {account.category}
                 </p>
-                {account.lastFourDigit && (
+                {account.accountNumber && (
                   <p className="text-tiny opacity-60 font-bold">
-                    •••• {account.lastFourDigit}
+                    •••• {account.accountNumber.slice(-4)}
                   </p>
                 )}
               </CardHeader>

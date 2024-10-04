@@ -1,13 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { Root } from './interface'
+import { App } from './interface'
 
-const initialState: Root = {
+const initialState: App = {
   showProcessingLoader: false,
-  client: {},
 }
 
-export const rootSlice = createSlice({
-  name: 'Root',
+export const appSlice = createSlice({
+  name: 'app',
   initialState,
   reducers: {
     setShowProcessingLoader(state, action) {
@@ -16,4 +15,4 @@ export const rootSlice = createSlice({
   },
 })
 
-export const { setShowProcessingLoader } = rootSlice.actions
+export const { setShowProcessingLoader } = appSlice.actions

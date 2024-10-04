@@ -15,10 +15,10 @@ export const createUser = async (_: any, { input }: { input: IUser }) => {
 
 export const deactivateUser = async (
   _: any,
-  { userId }: { userId: string }
+  { userID }: { userID: string }
 ) => {
   const updatedUser = await User.findByIdAndUpdate(
-    userId,
+    userID,
     { isDeactivated: true },
     { new: true }
   )

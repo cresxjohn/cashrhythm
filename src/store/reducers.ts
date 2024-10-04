@@ -1,8 +1,12 @@
 import { combineReducers } from '@reduxjs/toolkit'
-import { rootSlice } from './slices/root'
+import { appSlice } from './slices/app'
+import { clientSlice } from './slices/client'
+import { cashflowSlice } from './slices/cashflow'
 
 const reducers = combineReducers({
-  [rootSlice.name]: rootSlice.reducer,
+  [appSlice.name]: appSlice.reducer,
+  [clientSlice.name]: clientSlice.reducer,
+  [cashflowSlice.name]: cashflowSlice.reducer,
 })
 
 export default reducers

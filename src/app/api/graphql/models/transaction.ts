@@ -1,6 +1,7 @@
-import { Document, Schema, model, models } from 'mongoose'
+import { Document, Schema, Types, model, models } from 'mongoose'
 
 export interface ITransaction extends Document {
+  _id: Types.ObjectId
   amount: number
   dueDate: Date
   paymentDate?: Date

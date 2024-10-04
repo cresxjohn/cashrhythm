@@ -1,6 +1,6 @@
 'use client'
 
-import { DATE_FORMAT } from '@/common/formats/date'
+import { DATE_FORMAT } from '@/formats/date'
 import HomeLayout from '@/layout/HomeLayout'
 import { DateValue, parseDate } from '@internationalized/date'
 import { DateRangePicker, RangeValue } from '@nextui-org/react'

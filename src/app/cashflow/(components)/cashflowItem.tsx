@@ -1,7 +1,7 @@
 'use client'
 
 import InfoCircleIcon from '@/assets/icons/svg/InfoCircleIcon'
-import { formatMoney } from '@/common/formats/accounting'
+import { formatMoney } from '@/formats/accounting'
 import {
   Accordion,
   AccordionItem,

@@ -1,13 +1,16 @@
-import { Document, Schema, model, models } from 'mongoose'
+import { Document, Schema, Types, model, models } from 'mongoose'
 
 export interface IAccount extends Document {
+  _id: Types.ObjectId
   name: string
   category: string
   balance: number
+  accountNumber: string
   creditLimit?: number
   onHoldAmount?: number
   statementDate?: Date
   daysFromStatementToDueDate?: number
+  annualFee?: number
   dateIssued?: Date
   excludeInStats?: boolean
   isArchived?: boolean
@@ -27,6 +30,10 @@ const AccountSchema = new Schema<IAccount>({
     type: Number,
     required: true,
   },
+  accountNumber: {
+    type: String,
+    required: false,
+  },
   creditLimit: {
     type: Number,
     required: false,
@@ -40,6 +47,10 @@ const AccountSchema = new Schema<IAccount>({
     required: false,
   },
   daysFromStatementToDueDate: {
+    type: Number,
+    required: false,
+  },
+  annualFee: {
     type: Number,
     required: false,
   },

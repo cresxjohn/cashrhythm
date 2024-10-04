@@ -3,6 +3,7 @@ import { IAccount } from './account'
 import { ITransaction } from './transaction'
 
 export interface IPayment extends Document {
+  _id: Types.ObjectId
   name: string
   amount: number
   fromAccount: Types.ObjectId | IAccount
@@ -16,7 +17,7 @@ export interface IPayment extends Document {
   url?: string
   payee?: string
   note?: string
-  transactions: Types.DocumentArray<ITransaction>
+  transactions: ITransaction[]
   isArchived?: boolean
   isDeleted?: boolean
 }
@@ -93,6 +94,6 @@ const PaymentSchema = new Schema<IPayment>({
   },
 })
 
-const Payment = models.Payment ||  model<IPayment>('Payment', PaymentSchema)
+const Payment = models.Payment || model<IPayment>('Payment', PaymentSchema)
 
 export default Payment

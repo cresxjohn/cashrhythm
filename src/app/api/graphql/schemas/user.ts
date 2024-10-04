@@ -2,21 +2,21 @@ import { gql } from 'graphql-tag'
 
 export default gql`
   type User {
-    id: ID!
+    _id: ID!
     username: String!
     password: String!
     email: String!
   }
 
   type Client {
-    id: ID!
+    _id: ID!
     user: User!
     accounts: [Account!]!
     payments: [Payment!]!
   }
 
   input GetClientInput {
-    userId: String!
+    userID: String!
   }
 
   input CreateUserInput {
@@ -26,7 +26,7 @@ export default gql`
   }
 
   input DeactivateUserInput {
-    userId: ID!
+    userID: ID!
   }
 
   type CreateUserPayload {
