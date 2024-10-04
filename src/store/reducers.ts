@@ -1,10 +1,8 @@
 import { combineReducers } from '@reduxjs/toolkit'
-import { accountSlice } from './modules/accounts'
-import { profileSlice } from './modules/profile'
+import { rootSlice } from './slices/root'
 
 const reducers = combineReducers({
-  [profileSlice.name]: profileSlice.reducer,
-  [accountSlice.name]: accountSlice.reducer,
+  [rootSlice.name]: rootSlice.reducer,
 })
 
 export default reducers

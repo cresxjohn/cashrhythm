@@ -10,7 +10,7 @@ const Planner = () => {
   return (
     <HomeLayout>
       <main className="flex min-h-screen flex-col py-10 px-4 gap-6">
-        <p className="text-3xl font-semibold">Planner</p>
+        <p className="text-3xl font-semibold mb-2">Planner</p>
         <PlannerTable onAddNew={onOpen} />
         <PlannerAddModal isOpen={isOpen} onOpenChange={onOpenChange} />
       </main>

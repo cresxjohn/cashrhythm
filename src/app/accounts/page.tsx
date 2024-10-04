@@ -82,13 +82,10 @@ const Accounts = () => {
           return (
             <Card
               key={account.id}
-              className={cn(
-                'shadow h-[132px] p-1 bg-white/50 text-foreground',
-                {
-                  'bg-color-primary text-white':
-                    selectedAccountID === account.id,
-                }
-              )}
+              className={cn('h-[132px] p-1 text-foreground', {
+                'bg-color-primary text-white': selectedAccountID === account.id,
+              })}
+              shadow="none"
             >
               <div className="absolute bottom-0 " />
               <CardHeader className="flex-col items-start">
@@ -121,7 +118,7 @@ const Accounts = () => {
   return (
     <HomeLayout>
       <main className="flex min-h-screen flex-col py-10 px-4 gap-6">
-        <p className="text-3xl font-semibold">Accounts</p>
+        <p className="text-3xl font-semibold mb-2">Accounts</p>
         <div className="flex flex-col gap-4">
           <div className="flex justify-between gap-3 items-end">
             <Input
