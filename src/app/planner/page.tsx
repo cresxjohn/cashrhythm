@@ -4,8 +4,24 @@ import HomeLayout from '@/layout/HomeLayout'
 import { useDisclosure } from '@nextui-org/react'
 import PlannerAddModal from './(components)/(addModal)'
 import PlannerTable from './(components)/(table)/table'
+import { useEffect } from 'react'
+import { createCalculateCashflowWorker } from '@/lib/workers'
 const Planner = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
+
+  useEffect(() => {
+    const worker = createCalculateCashflowWorker()
+
+    worker.onmessage = (event) => {
+      console.log(event.data.result)
+    }
+
+    worker.postMessage({ num: 5 })
+
+    return () => {
+      worker.terminate()
+    }
+  }, [])
 
   return (
     <HomeLayout>

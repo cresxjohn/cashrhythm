@@ -28,7 +28,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/api/graphql/route.ts"
+    "src/app/api/graphql/route.ts",
+    "public/workers/calculate-cashflow.js"
   ],
   "exclude": ["node_modules"]
 }
