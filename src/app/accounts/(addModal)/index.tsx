@@ -18,6 +18,9 @@ import { useFormik } from 'formik'
 import { FC } from 'react'
 import * as Yup from 'yup'
 import { accountCategoryOptions } from './constant'
+import { useDispatch } from '@/store'
+import { createAccount } from '@/store/slices/client'
+import { uniqueId } from 'lodash'
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required('Name is required'),
@@ -32,20 +35,27 @@ interface Props {
 
 const AccountsAddModal: FC<Props> = (props) => {
   const { isOpen, onOpenChange } = props
+  const dispatch = useDispatch()
 
-  const onSubmit = (values: Account) => {
-    console.log({ values })
+  const onSubmit = (
+    values: Account,
+    { resetForm }: { resetForm: Function }
+  ) => {
+    dispatch(createAccount(values))
+    onOpenChange(false)
+    resetForm()
   }
 
   const { errors, values, setFieldValue, handleSubmit } = useFormik<Account>({
     initialValues: {
-      name: 'Hey',
+      _id: uniqueId(),
+      name: '',
       category: '',
-      balance: 122,
+      balance: 0,
       accountNumber: '',
       onHoldAmount: 0,
       creditLimit: 0,
-      statementDate: parseDate('2024-02-01'),
+      statementDate: undefined,
       daysFromStatementToDueDate: 0,
       annualFee: 0,
       dateIssued: undefined,
@@ -56,8 +66,6 @@ const AccountsAddModal: FC<Props> = (props) => {
     validateOnBlur: false,
     validateOnChange: false,
   })
-
-  // console.log({ errors, values })
 
   return (
     <Modal
