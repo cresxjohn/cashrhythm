@@ -4,9 +4,10 @@ import { IPayment } from './payment'
 import { IUser } from './user'
 
 export interface IClient extends Document {
+  _id: Types.ObjectId
   user: Types.ObjectId | IUser
-  accounts: Types.DocumentArray<IAccount>
-  payments: Types.DocumentArray<IPayment>
+  accounts: IAccount[]
+  payments: IPayment[]
 }
 
 const ClientSchema = new Schema<IClient>({
@@ -31,6 +32,6 @@ const ClientSchema = new Schema<IClient>({
   ],
 })
 
-const Client = models.Client ||  model<IClient>('Client', ClientSchema)
+const Client = models.Client || model<IClient>('Client', ClientSchema)
 
 export default Client

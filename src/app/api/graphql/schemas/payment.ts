@@ -2,7 +2,7 @@ import { gql } from 'graphql-tag'
 
 export default gql`
   type Payment {
-    id: ID!
+    _id: ID!
     name: String!
     amount: Float!
     fromAccount: Account!
@@ -56,10 +56,10 @@ export default gql`
   }
 
   type Mutation {
-    createPayment(clientId: ID!, input: CreatePaymentInput!): Payment!
-    updatePayment(paymentId: ID!, input: UpdatePaymentInput!): Payment!
-    deletePayment(paymentId: ID!, clientId: ID!): Payment!
-    archivePayment(paymentId: ID!): Payment!
-    unarchivePayment(paymentId: ID!): Payment!
+    createPayment(clientID: ID!, input: CreatePaymentInput!): Payment!
+    updatePayment(paymentID: ID!, input: UpdatePaymentInput!): Payment!
+    deletePayment(paymentID: ID!, clientID: ID!): Payment!
+    archivePayment(paymentID: ID!): Payment!
+    unarchivePayment(paymentID: ID!): Payment!
   }
 `

@@ -3,12 +3,12 @@ import Transaction, { ITransaction } from '../models/transaction'
 export const updateTransaction = async (
   _: any,
   {
-    transactionId,
+    transactionID,
     input,
-  }: { transactionId: string; input: Partial<ITransaction> }
+  }: { transactionID: string; input: Partial<ITransaction> }
 ) => {
   const updatedTransaction = await Transaction.findByIdAndUpdate(
-    transactionId,
+    transactionID,
     input,
     { new: true }
   )
@@ -18,10 +18,10 @@ export const updateTransaction = async (
 
 export const skipTransaction = async (
   _: any,
-  { transactionId }: { transactionId: string }
+  { transactionID }: { transactionID: string }
 ) => {
   const updatedTransaction = await Transaction.findByIdAndUpdate(
-    transactionId,
+    transactionID,
     { isSkipped: true },
     { new: true }
   )
@@ -31,10 +31,10 @@ export const skipTransaction = async (
 
 export const voidTransaction = async (
   _: any,
-  { transactionId }: { transactionId: string }
+  { transactionID }: { transactionID: string }
 ) => {
   const updatedTransaction = await Transaction.findByIdAndUpdate(
-    transactionId,
+    transactionID,
     { isVoided: true },
     { new: true }
   )
@@ -44,10 +44,10 @@ export const voidTransaction = async (
 
 export const deleteTransaction = async (
   _: any,
-  { transactionId }: { transactionId: string }
+  { transactionID }: { transactionID: string }
 ) => {
   const updatedTransaction = await Transaction.findByIdAndUpdate(
-    transactionId,
+    transactionID,
     { isDeleted: true },
     { new: true }
   )

@@ -1,7 +1,8 @@
 'use client'
 
 import { Tab, Tabs } from '@nextui-org/react'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
+import { useRouter } from 'nextjs-toploader/app'
 import { FC, Key } from 'react'
 
 const tabs = [
@@ -16,9 +17,9 @@ const tabs = [
     path: '/planner',
   },
   {
-    key: 'stats',
-    title: 'Stats',
-    path: '/stats',
+    key: 'cashflow',
+    title: 'Cashflow',
+    path: '/cashflow',
   },
   {
     key: 'records',

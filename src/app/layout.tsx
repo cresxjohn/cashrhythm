@@ -1,9 +1,10 @@
 import EnvironmentBanner from '@/components/env-banner'
 import { Providers } from '@/providers'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+import NextTopLoader from 'nextjs-toploader'
 import './global.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -132,6 +133,12 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         />
       </head>
       <body className={inter.className}>
+        <NextTopLoader
+          color="#7cbd1c"
+          height={2}
+          shadow={false}
+          showSpinner={false}
+        />
         <Providers>
           <EnvironmentBanner />
           {children}

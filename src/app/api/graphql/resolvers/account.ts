@@ -3,11 +3,11 @@ import Client from '../models/client'
 
 export const createAccount = async (
   _: any,
-  { clientId, input }: { clientId: string; input: IAccount }
+  { clientID, input }: { clientID: string; input: IAccount }
 ) => {
   const newAccount = await Account.create(input)
 
-  await Client.findByIdAndUpdate(clientId, {
+  await Client.findByIdAndUpdate(clientID, {
     $push: { accounts: newAccount._id },
   })
 

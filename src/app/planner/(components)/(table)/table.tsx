@@ -386,6 +386,7 @@ const PlannerTable: FC<Props> = (props) => {
       topContentPlacement="outside"
       onSelectionChange={setSelectedKeys}
       onSortChange={setSortDescriptor}
+      shadow="none"
     >
       <TableHeader columns={headerColumns}>
         {(column) => (

@@ -2,7 +2,7 @@ import { gql } from 'graphql-tag'
 
 export default gql`
   type Transaction {
-    id: ID!
+    _id: ID!
     amount: Float!
     dueDate: String!
     paymentDate: String
@@ -20,11 +20,11 @@ export default gql`
 
   type Mutation {
     updateTransaction(
-      transactionId: ID!
+      transactionID: ID!
       input: UpdateTransactionInput!
     ): Transaction!
-    deleteTransaction(transactionId: ID!, paymentId: ID!): Transaction!
-    skipTransaction(transactionId: ID!): Transaction!
-    voidTransaction(transactionId: ID!): Transaction!
+    deleteTransaction(transactionID: ID!, paymentID: ID!): Transaction!
+    skipTransaction(transactionID: ID!): Transaction!
+    voidTransaction(transactionID: ID!): Transaction!
   }
 `
